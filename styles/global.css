@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Leckerli One', 'Open Sans', 'Baloo 2', sans-serif;
+    --font-family: 'Open Sans', sans-serif;
+    --text: 400 1rem var(--font-family);
+    --text-lg: 400 1.25rem var(--font-family);
+
+    /*Text*/
+    --color-text-primary: #C8CDD0;
+    --color-text-secondary: #F9F9F9;
+
+    /*Feedback*/
+    --color-feedback-success: #FF5959;
+
+    /*Input*/
+    --color-input-base: #1C1F21;
+    --color-stroke: #363B40;  
+    --color-input-placeholder: #869198;
+
+    /*Shapes*/
+    --color-shape-primary: #131516;
+    --color-shape-secondary: #212427;
+    --color-shape-tertiary: #2D3136;
+    --color-shape-quaternary: #383D42;
+
+    /*Brand Colors*/
+    --color-brand-light: #59B2FF;
+    --color-brand-medium: #3487CF;
+    --color-brand-dark: #1D6FB6;
+
+    /*Accent Colors*/
+    --color-primary: #B259FF;
+    --color-primary-dark: #FF59F9;
+    --color-secondary: #FF598B;
+    --color-secondary-dark: #FF8B59;
+    --color-success: #FFCD59;
+    --color-error: #E1FF59;
+    --color-warning: #59FF91;
+    --color-info: #59FFF9;
+    --color-white: #6A59FF;
+}
+
+body {
+    background-color: var(--color-shape-primary);
+    font: var(--text);
+    color: var(--color-text-primary);
+}
