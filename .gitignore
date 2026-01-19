@@ -1,0 +1,46 @@
+# Arquivos do Sistema
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Editor de Código
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.atom/
+
+# Node (se for usar no futuro)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Ambiente
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Compilados/Distributivos
+dist/
+build/
+out/
+
+# Testes
+coverage/
+.nyc_output/
+
+# Arquivos temporários
+tmp/
+temp/
+*.tmp
+
+# Apenas para desenvolvimento local
+.DS_Store
+*.bak

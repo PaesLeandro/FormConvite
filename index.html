@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -16,6 +16,8 @@
     />
   </head>
   <body>
+    <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox" />
+
     <div class="layout-wrapper">
       <header class="aside-container">
         <div class="background-container">
@@ -36,28 +38,34 @@
       </header>
 
       <div class="container">
-        <div class="form">
-          <h2>Crie seu convite</h2>
-        </div>
+        <form id="convite-form" method="POST" action="#">
+          <div class="form">
+            <h2>Crie seu convite</h2>
+          </div>
 
-        <div class="calendar">
-          <img src="assets/icons/calendar.svg" alt="Icone de calendário" />
-          <h4>Sobre o evento</h4>
-        </div>
+          <div class="calendar">
+            <img src="assets/icons/calendar.svg" alt="Icone de calendário" />
+            <h4>Sobre o evento</h4>
+          </div>
 
         <div class="input-group">
           <label for="titulo-evento">Título</label>
-          <input type="text" id="titulo-evento" placeholder="Nome do evento" />
+          <input
+            type="text"
+            id="titulo-evento"
+            placeholder="Nome do evento"
+            required
+          />
         </div>
 
         <div class="input-row">
           <div class="input-group">
-            <h4>Ínicio</h4>
-            <input type="datetime-local" id="data do evento" />
+            <h4>Início</h4>
+            <input type="datetime-local" id="data-inicio" required />
           </div>
           <div class="input-group">
             <h4>Fim</h4>
-            <input type="datetime-local" id="data do evento" />
+            <input type="datetime-local" id="data-fim" required />
           </div>
         </div>
 
@@ -66,7 +74,7 @@
             <h4>Tipo</h4>
             <div class="tipo-options">
               <label class="tipo-option">
-                <input type="radio" name="tipo" value="presencial" />
+                <input type="radio" name="tipo" value="presencial" required />
                 <img src="assets/icons/building-2.svg" alt="Icone de prédio" />
                 <p>Presencial</p>
               </label>
@@ -80,7 +88,12 @@
 
           <div class="input-group">
             <h4>Local</h4>
-            <input type="text" id="local" placeholder="Link ou endereço" />
+            <input
+              type="text"
+              id="local"
+              placeholder="Link ou endereço"
+              required
+            />
           </div>
         </div>
 
@@ -91,6 +104,7 @@
             cols="50"
             rows="5"
             placeholder="Escreva mais detalhes sobre o evento"
+            required
           ></textarea>
         </div>
 
@@ -105,91 +119,60 @@
         <div class="colors">
           <p>Cor principal</p>
           <div class="color-options">
-            <label class="color-option color">
-              <input type="radio" name="cor-principal" value="color" />
-              <img
-                src="assets/icons/ColorSelection.svg"
-                alt="icone de paleta de cores"
-              />
-            </label>
 
             <label class="color-option color-1">
               <input type="radio" name="cor-principal" value="color-1" />
-              <img
-                src="assets/icons/ColorSelection-1.svg"
-                alt="icone de paleta de cores"
-              />
+              <img src="assets/icons/ColorSelection.svg" alt="Cor 1" />
             </label>
+
             <label class="color-option color-2">
               <input type="radio" name="cor-principal" value="color-2" />
-              <img
-                src="assets/icons/ColorSelection-2.svg"
-                alt="icone de paleta de cores"
-              />
+              <img src="assets/icons/ColorSelection-1.svg" alt="Cor 2" />
             </label>
 
             <label class="color-option color-3">
               <input type="radio" name="cor-principal" value="color-3" />
-              <img
-                src="assets/icons/ColorSelection-3.svg"
-                alt="icone de paleta de cores"
-              />
+              <img src="assets/icons/ColorSelection-2.svg" alt="Cor 3" />
             </label>
 
             <label class="color-option color-4">
               <input type="radio" name="cor-principal" value="color-4" />
-              <img
-                src="assets/icons/ColorSelection-4.svg"
-                alt="icone de paleta de cores"
-              />
+              <img src="assets/icons/ColorSelection-3.svg" alt="Cor 4" />
             </label>
 
             <label class="color-option color-5">
               <input type="radio" name="cor-principal" value="color-5" />
-              <img
-                src="assets/icons/ColorSelection-5.svg"
-                alt="icone de paleta de cores"
-              />
+              <img src="assets/icons/ColorSelection-4.svg" alt="Cor 5" />
             </label>
 
             <label class="color-option color-6">
               <input type="radio" name="cor-principal" value="color-6" />
-              <img
-                src="assets/icons/ColorSelection-6.svg"
-                alt="icone de paleta de cores"
-              />
+              <img src="assets/icons/ColorSelection-5.svg" alt="Cor 6" />
             </label>
 
             <label class="color-option color-7">
               <input type="radio" name="cor-principal" value="color-7" />
-              <img
-                src="assets/icons/ColorSelection-7.svg"
-                alt="icone de paleta de cores"
-              />
+              <img src="assets/icons/ColorSelection-6.svg" alt="Cor 7" />
             </label>
 
             <label class="color-option color-8">
               <input type="radio" name="cor-principal" value="color-8" />
-              <img
-                src="assets/icons/ColorSelection-8.svg"
-                alt="icone de paleta de cores"
-              />
+              <img src="assets/icons/ColorSelection-7.svg" alt="Cor 8" />
             </label>
 
             <label class="color-option color-9">
               <input type="radio" name="cor-principal" value="color-9" />
-              <img
-                src="assets/icons/ColorSelection-9.svg"
-                alt="icone de paleta de cores"
-              />
+              <img src="assets/icons/ColorSelection-8.svg" alt="Cor 9" />
             </label>
 
             <label class="color-option color-10">
               <input type="radio" name="cor-principal" value="color-10" />
-              <img
-                src="assets/icons/ColorSelection-10.svg"
-                alt="icone de paleta de cores"
-              />
+              <img src="assets/icons/ColorSelection-9.svg" alt="Cor 10" />
+            </label>
+
+            <label class="color-option color-11">
+              <input type="radio" name="cor-principal" value="color-11" />
+              <img src="assets/icons/ColorSelection-10.svg" alt="Cor 11" />
             </label>
           </div>
         </div>
@@ -197,83 +180,96 @@
         <div class="tema-row">
           <h4>Tema do evento</h4>
           <div class="evento-options">
-            <div class="evento-option">
+            <label class="evento-option">
+              <input type="radio" name="tema" value="aniversario" />
               <img
                 src="assets/icons/Aniversario.svg"
                 alt="icone de aniversário"
               />
               <p>Aniversário</p>
-            </div>
-            <div class="evento-option">
+            </label>
+            <label class="evento-option">
+              <input type="radio" name="tema" value="infantil" />
               <img src="assets/icons/Infantil.svg" alt="icone de infantil" />
               <p>Infantil</p>
-            </div>
-            <div class="evento-option">
+            </label>
+            <label class="evento-option">
+              <input type="radio" name="tema" value="formatura" />
               <img src="assets/icons/Formatura.svg" alt="icone de formatura" />
               <p>Formatura</p>
-            </div>
-            <div class="evento-option">
+            </label>
+            <label class="evento-option">
+              <input type="radio" name="tema" value="casamento" />
               <img src="assets/icons/Casamento.svg" alt="icone de casamento" />
               <p>Casamento</p>
-            </div>
+            </label>
 
-            <div class="evento-option">
+            <label class="evento-option">
+              <input type="radio" name="tema" value="cha-bebe" />
               <img
                 src="assets/icons/ChaDeBebe.svg"
                 alt="icone de chá de bebê"
               />
               <p>Chá de Bebê</p>
-            </div>
+            </label>
 
-            <div class="evento-option">
+            <label class="evento-option">
+              <input type="radio" name="tema" value="cha-panela" />
               <img
                 src="assets/icons/ChaDePanela.svg"
                 alt="icone de chá de panela"
               />
               <p>Chá de Panela</p>
-            </div>
+            </label>
 
-            <div class="evento-option">
+            <label class="evento-option">
+              <input type="radio" name="tema" value="carnaval" />
               <img src="assets/icons/Carnaval.svg" alt="icone de carnaval" />
               <p>Carnaval</p>
-            </div>
+            </label>
 
-            <div class="evento-option">
+            <label class="evento-option">
+              <input type="radio" name="tema" value="pascoa" />
               <img src="assets/icons/Pascoa.svg" alt="icone de Pascoa" />
               <p>Páscoa</p>
-            </div>
+            </label>
 
-            <div class="evento-option">
+            <label class="evento-option">
+              <input type="radio" name="tema" value="sao-joao" />
               <img src="assets/icons/SaoJoao.svg" alt="icone de São João" />
               <p>São João</p>
-            </div>
+            </label>
 
-            <div class="evento-option">
+            <label class="evento-option">
+              <input type="radio" name="tema" value="halloween" />
               <img src="assets/icons/Halloween.svg" alt="icone de Halloween" />
               <p>Halloween</p>
-            </div>
+            </label>
 
-            <div class="evento-option">
+            <label class="evento-option">
+              <input type="radio" name="tema" value="natal" />
               <img src="assets/icons/Natal.svg" alt="icone de Natal" />
               <p>Natal</p>
-            </div>
+            </label>
 
-            <div class="evento-option">
+            <label class="evento-option">
+              <input type="radio" name="tema" value="outro" />
               <img src="assets/icons/Outro.svg" alt="icone de outro" />
               <p>Outro</p>
-            </div>
+            </label>
           </div>
 
           <div class="estilo">
             <div class="estilo-option">
               <h4>Estilo</h4>
-              <div class="estilo-content">
-                <img
-                  src="assets/icons/Frame 48095946.svg"
-                  alt="icone de claro/escuro"
-                />
-                <p>Escuro</p>
-              </div>
+              <label class="estilo-toggle">
+                <input type="checkbox" id="estilo-claro" />
+                <div class="toggle-switch">
+                  <span class="toggle-label">Escuro</span>
+                  <div class="toggle-slider"></div>
+                  <span class="toggle-label">Claro</span>
+                </div>
+              </label>
             </div>
 
             <div class="estilo-option">
@@ -283,7 +279,7 @@
                   <img src="assets/icons/upload.svg" alt="icone de upload" />
                   <span>Selecionar</span>
                 </label>
-                <input type="file" id="file-upload" hidden />
+                <input type="file" id="file-upload" hidden accept="image/*" />
                 <span class="file-status">Nenhum arquivo selecionado</span>
               </div>
             </div>
@@ -302,12 +298,13 @@
               placeholder="Nome completo"
               required
             />
-            <div class="error">
+            <div class="error-wrapper">
               <img
                 src="assets/icons/circle-alert.svg"
-                alt="icone de alerta vermelho"
+                alt="icone de alerta"
+                class="error-icon"
               />
-              <span>Campo obrigatório</span>
+              <span class="error-message">Campo obrigatório</span>
             </div>
           </div>
 
@@ -317,8 +314,17 @@
               <input
                 type="email"
                 id="email-contato"
-                placeholder="exemplo@email.com"
+                placeholder="Exemplo@email.com"
+                required
               />
+              <div class="error-wrapper">
+                <img
+                  src="assets/icons/circle-alert.svg"
+                  alt="icone de alerta"
+                  class="error-icon"
+                />
+                <span class="error-message">E-mail inválido</span>
+              </div>
             </div>
 
             <div class="input-group">
@@ -327,12 +333,23 @@
                 type="tel"
                 id="telefone-contato"
                 placeholder="(99) 99999-9999"
+                pattern="^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$"
+                title="Formato esperado: (99) 99999-9999"
+                required
               />
+              <div class="error-wrapper">
+                <img
+                  src="assets/icons/circle-alert.svg"
+                  alt="icone de alerta"
+                  class="error-icon"
+                />
+                <span class="error-message">Telefone inválido</span>
+              </div>
             </div>
 
             <div class="terms-wrapper frame-wrapper">
-              <img src="assets/icons/Frame 48095946 (2).svg" alt="frame" />
-              <label for="terms">
+              <input type="checkbox" id="terms-1" />
+              <label for="terms-1">
                 Declaro que li e concordo com os
                 <strong>Termos e Condições</strong> e com a
                 <strong>Política de Privacidade</strong>
@@ -340,27 +357,27 @@
             </div>
 
             <div class="terms-wrapper frame-wrapper">
-              <img src="assets/icons/Frame 48095946 (2).svg" alt="frame" />
-              <label for="terms">
+              <input type="checkbox" id="terms-2" />
+              <label for="terms-2">
                 Aceito receber atualizações e promoções por e-mail
               </label>
             </div>
 
             <div class="terms-wrapper frame-wrapper">
-              <img src="assets/icons/Frame 48095946 (2).svg" alt="frame" />
-              <label for="terms">
+              <input type="checkbox" id="terms-3" />
+              <label for="terms-3">
                 Aceito receber atualizações e promoções por SMS
               </label>
             </div>
 
             <div class="button-container">
-              <button class="generate-button">
+              <button class="generate-button" type="submit">
                 <img src="assets/icons/ticket.svg" alt="Ingresso" />
                 <span>Gerar convite</span>
               </button>
             </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   </body>
