@@ -59,7 +59,7 @@ body {
 
 .aside-container {
     border-radius: 12px;
-    padding: 0 35px 35px;
+    padding: 0 0 35px;
     width: 400px;
     max-width: 100%;
     height: fit-content;
@@ -81,15 +81,18 @@ body {
 .logo-container {
     position: absolute;
     top: 60px;
-    left: 60px;
+    left: 50%;
     width: 45.85px;
     height: 48px;
+    transform: translateX(-50%);
 }
 
 .text-logo {
     position: absolute;
     top: 120px;
-    left: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
 }
 
 .p-sobrescrito {
@@ -349,7 +352,7 @@ input[type="datetime-local"]::-webkit-datetime-edit-ampm-field {
 
     .aside-container {
         width: 320px;
-        padding: 0 24px 24px;
+        padding: 0 0 24px;
     }
 
     .container {
@@ -371,7 +374,7 @@ input[type="datetime-local"]::-webkit-datetime-edit-ampm-field {
 
     .aside-container {
         width: 100%;
-        padding: 0 20px 24px;
+        padding: 0 0 24px;
     }
 
     .logo-container {
