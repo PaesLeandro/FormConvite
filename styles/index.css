@@ -42,6 +42,7 @@ html {
 
 body {
     transition: all 0.3s ease;
+    overflow-x: hidden;
 }
 
 .layout-wrapper {
@@ -233,7 +234,8 @@ body {
 }
 
 .tipo-option input[type="radio"] {
-    display: none;}
+    display: none;
+}
 
 .tipo-option:has(input[type="radio"]:checked) {
     background-color: var(--color-shape-quaternary);
@@ -330,14 +332,79 @@ input[type="datetime-local"]::-webkit-datetime-edit-ampm-field {
     color: var(--color-input-placeholder);
 }
 
+@media (max-width: 1024px) {
+    .layout-wrapper {
+        padding: 1.5rem;
+        gap: 24px;
+    }
+
+    .aside-container {
+        width: 320px;
+        padding: 0 24px 24px;
+    }
+
+    .container {
+        padding: 28px;
+    }
+
+    .color-options {
+        grid-template-columns: repeat(auto-fit, minmax(56px, 1fr));
+    }
+}
+
 @media (max-width: 768px) {
     .layout-wrapper {
         flex-direction: column;
         gap: 20px;
+        max-width: 100%;
+        padding: 1.25rem;
     }
 
     .aside-container {
         width: 100%;
+    }
+
+    .input-row,
+    .tipo-row,
+    .input-row-contato {
+        grid-template-columns: 1fr;
+    }
+
+    .estilo {
+        grid-template-columns: 1fr;
+    }
+
+    .button-container {
+        justify-content: center;
+    }
+
+    .color-options {
+        grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    .form h2 {
+        font-size: clamp(1.4rem, 5vw, 1.75rem);
+    }
+
+    .calendar h4,
+    .personalizacao h4,
+    .contato h4 {
+        font-size: 1rem;
+    }
+
+    .color-options {
+        grid-template-columns: repeat(auto-fit, minmax(44px, 1fr));
+    }
+
+    .evento-option {
+        width: 100%;
+        min-height: 90px;
     }
 }
 
@@ -356,7 +423,7 @@ input[type="datetime-local"]::-webkit-datetime-edit-ampm-field {
 
 .color-options {
     display: grid;
-    grid-template-columns: repeat(11, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(56px, 1fr));
     gap: 12px;
 }
 
