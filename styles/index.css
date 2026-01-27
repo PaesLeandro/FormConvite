@@ -95,9 +95,11 @@ body {
 .p-sobrescrito {
     position: absolute;
     top: 160px;
-    left: 60px;
+    left: 50%;
     width: 336px;
     max-width: calc(100% - 80px);
+    transform: translateX(-50%);
+    text-align: center;
     height: 22px;
     font-size: 14px;
     font-family: "Open Sans", sans-serif;
@@ -373,21 +375,26 @@ input[type="datetime-local"]::-webkit-datetime-edit-ampm-field {
     }
 
     .logo-container {
-        left: 24px;
+        left: 50%;
         top: 40px;
         width: 40px;
         height: 42px;
+        transform: translateX(-50%);
     }
 
     .text-logo {
-        left: 24px;
+        left: 50%;
         top: 96px;
+        transform: translateX(-50%);
+        text-align: center;
     }
 
     .p-sobrescrito {
-        left: 24px;
+        left: 50%;
         top: 138px;
         max-width: calc(100% - 48px);
+        transform: translateX(-50%);
+        text-align: center;
     }
 
     .input-row,
@@ -434,19 +441,24 @@ input[type="datetime-local"]::-webkit-datetime-edit-ampm-field {
     }
 
     .logo-container {
-        left: 16px;
-        top: 36px;
+        left: 50%;
+        top: 32px;
+        transform: translateX(-50%);
     }
 
     .text-logo {
-        left: 16px;
-        top: 86px;
+        left: 50%;
+        top: 84px;
+        transform: translateX(-50%);
+        text-align: center;
     }
 
     .p-sobrescrito {
-        left: 16px;
-        top: 126px;
+        left: 50%;
+        top: 124px;
         max-width: calc(100% - 32px);
+        transform: translateX(-50%);
+        text-align: center;
     }
 }
 
