@@ -50,7 +50,7 @@ body {
     display: flex;
     gap: 40px;
     padding: 2rem;
-    max-width: 1200px;
+    max-width: min(1200px, 100vw);
     width: 100%;
     margin: 0 auto;
     align-items: flex-start;
@@ -108,6 +108,7 @@ body {
     background-color: var(--color-shape-secondary);
     border-radius: 12px;
     padding: 40px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -511,7 +512,7 @@ input[type="datetime-local"]::-webkit-datetime-edit-ampm-field {
 
 .evento-options {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     gap: 12px;
 }
 
